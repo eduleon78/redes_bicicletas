@@ -13,19 +13,19 @@ block content
   br
 
   form(action=`/bicicletas/${bici.id}/update` method='post')
-    Label(form='id') ID: 
+    Label(for='id') ID: 
     input#id(type='text' name='id' value=bici.id)
     br
-    Label(form='color') Color: 
+    Label(for='color') Color: 
     input#color(type='text' name='color' value=bici.color)
     br
-    Label(form='modelo') Modelo: 
+    Label(for='modelo') Modelo: 
     input#modelo(type='text' name='modelo' value=bici.modelo)
     br
-    Label(form='latitud') Latitud: 
+    Label(for='latitud') Latitud: 
     input#modelo(type='text' name='latitud' value=bici.ubicacion[0])
     br
-    Label(form='longitud') Longitud: 
+    Label(for='longitud') Longitud: 
     input#modelo(type='text' name='longitud' value=bici.ubicacion[1])
     br
     br 
