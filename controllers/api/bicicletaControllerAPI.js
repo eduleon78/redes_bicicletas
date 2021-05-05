@@ -6,7 +6,7 @@ exports.bicicleta_list= function(req,res){
     });
 }
     
-exports.bicicleta_create = function(req, res){
+exports.bicicleta_create = function(req,res){
     var bici = new Bicicleta(req.body.id, req.body.color, req.body.modelo);
     bici.ubicacion = [req.body.lat, req.body.lng];
 
