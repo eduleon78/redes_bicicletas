@@ -110,11 +110,11 @@ app.post('/resetPassword', function(req, res){
     res.render('session/resetPassword', {errors: {confirm_password: {message: 'no coincide'}}});
     return;
   }
-  Usuario.findOne({ email: req.body.email }, function (err, usuario) {
-    usuario.password = req.body.password;
-    usuario.save(function(err){
-      if(err){
-        res.render('session/resetPasswprd', {errors: err.errors, usuario: new Usuario})
+Usuario.findOne({ email: req.body.email }, function (err, usuario) {
+  usuario.password = req.body.password;
+  usuario.save(function(err){
+      if (err) {
+        res.render('session/resetPasswprd', {errors: err.errors, usuario: new Usuario({email: req.body.email})});
       }else{
         res.redirect('/login');
       }});
@@ -129,6 +129,10 @@ app.use('/bicicletas', loggedIn, bicicletasRouter);
 app.use('/api/auth', authAPIRouter);
 app.use('/api/bicicletas', validarUsurio, bicicletasAPIRouter);
 app.use('/api/usuarios', usuariosAPIRouter);
+
+app.use('/privacy_policy', function(req, res){
+  res.sendFile('public/policy_privacy.html');
+});
 
 app.use('/', indexRouter);
 
