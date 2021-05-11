@@ -1,6 +1,6 @@
 var Usuario = require('../../models/usuario');
 
-exports.usuario_list = function(req, res){
+exports.usuarios_list = function(req, res){
     Usuario.find({}, function(err, usuarios){
         res.status(200).json({
             usuarios: usuarios
@@ -9,9 +9,10 @@ exports.usuario_list = function(req, res){
 };
 
 exports.usuarios_create = function(req, res){
-    var usuario = new Usuario({nombre: req.body.nombre});
+    var usuario = new Usuario({nombre: req.body.nombre, email: req.body.email, password: req.body.password});
 
     usuario.save(function(err){
+        if(err) return res.status(500).json(err);
         res.status(200).json(usuario);
     });
 };

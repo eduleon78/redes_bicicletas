@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -35,7 +36,12 @@ app.use(session({
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/redes_bicicletas', {useNewUrlParser: true, useUnifiedTopology: true});
+//mongodb+srv://admin:<759fDiB79D7b82Uenpm>@redes-bicicletas.6i9jj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+// si estoy enn el ambiente de desarrollo usar
+//var mongoDB = 'mongoDB://localhost/redes_bicicletas';
+//sino usar
+var mongoDB = process.env.MONGO_URI;
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -118,7 +124,7 @@ app.post('/resetPassword', function(req, res){
 app.use('/usuarios', usuariosRouter);
 app.use('/token', tokenRouter);
 
-app.use('/bicicletas', loggegIn, bicicletasRouter);
+app.use('/bicicletas', loggedIn, bicicletasRouter);
 
 app.use('/api/auth', authAPIRouter);
 app.use('/api/bicicletas', validarUsurio, bicicletasAPIRouter);
