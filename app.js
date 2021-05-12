@@ -134,6 +134,10 @@ app.use('/privacy_policy', function(req, res){
   res.sendFile('public/policy_privacy.html');
 });
 
+app.use('/google31dcdb96089a048f.html', function(req, res){
+  res.sendFile('public/google31dcdb96089a048f.htmll');
+});
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
