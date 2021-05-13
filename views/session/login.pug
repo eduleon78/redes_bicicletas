@@ -1,52 +1,30 @@
-doctype html
+link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stulesheets')
+script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
 head
-  title Login V3
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  // ===============================================================================================
-  link(rel='icon' type='image/png' href='images/icons/favicon.ico')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='vendor/bootstrap/css/bootstrap.min.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='fonts/font-awesome-4.7.0/css/font-awesome.min.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='fonts/iconic/css/material-design-iconic-font.min.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='vendor/animate/animate.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='vendor/css-hamburgers/hamburgers.min.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='vendor/animsition/css/animsition.min.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='vendor/select2/select2.min.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='vendor/daterangepicker/daterangepicker.css')
-  // ===============================================================================================
-  link(rel='stylesheet' type='text/css' href='css/util.css')
-  link(rel='stylesheet' type='text/css' href='css/main.css')
-  // ===============================================================================================
-.limiter
-  .container-login100(style="background-image: url('images/bg-01.jpg');")
-    .wrap-login100
-      form.login100-form.validate-form
-        span.login100-form-logo
-          i.zmdi.zmdi-landscape
-        span.login100-form-title.p-b-34.p-t-27
-          | Log in
-        .wrap-input100.validate-input(data-validate='Enter username')
-          input.input100(type='text' name='username' placeholder='Username')
-          span.focus-input100(data-placeholder='')
-        .wrap-input100.validate-input(data-validate='Enter password')
-          input.input100(type='password' name='pass' placeholder='Password')
-          span.focus-input100(data-placeholder='')
-        .contact100-form-checkbox
-          input#ckb1.input-checkbox100(type='checkbox' name='remember-me')
-          label.label-checkbox100(for='ckb1')
-            | Remember me
-        .container-login100-form-btn
-          button.login100-form-btn
-            | Login
-        .text-center.p-t-90
-          a.txt1(href='#')
-            | Forgot Password?
-#dropDownSelect1
+  link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stulesheets')
+  script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  link(rel='stulesheets', href='../stylesheets/login.css')
+
+body#LoginForm
+  .container
+    .login-form
+      .main-div
+        .panel
+          if info && info.message 
+            div.alert.alert-danger
+              = info.message
+          h2 Admin Login
+          p Por favor, ingrese su email and password
+        form#Login(action='/login' method='post')
+          .form-group
+            input#username.form-control(type='email' placeholder='Email Address' name="username")
+          .form-group
+            input#password.form-control(type='password' placeholder='Password' name="password")
+          .forgot
+            a(href='/forgotPassword') Olvidé mi password
+
+        a(href='/auth/google') Log in con Google
+
+          button.btn.btn-primary(type='submit') Login
