@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const passport = require('./config/passport');
 const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
 const jwt = require('jsonwebtoken');
 
 
@@ -20,14 +21,24 @@ var authAPIRouter = require('./routes/api/auth');
 const usuario = require('./models/usuario');
 const token = require('./models/token');
 
-const store = new session.MemoryStore;
+let store;
+if(process.env.NODE_ENV === 'development'){
+  store = new session.MemoryStore;
+}else{
+  store = new MongoDBStore({
+    uri: process.env.MONGO_URI,
+    collection: 'sessions'
+  });
+  store.on('error', function(error) {
+    assert.ifError(error);
+    assert.ok(false);
+  });
+}
 
-var app = express();
-
+let app = express();
 app.set('secretKey', 'jwt_pwd_!!123123');
-
 app.use(session({
-  app: {maxAge: 240 + 60 + 1000 },
+  app: { maxAge: 240 + 60 + 1000 },
   store: store,
   saveUninitialized: true,
   resave: 'true',
@@ -137,6 +148,19 @@ app.use('/privacy_policy', function(req, res){
 app.use('/google31dcdb96089a048f.html', function(req, res){
   res.sendFile('public/google31dcdb96089a048f.htmll');
 });
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope: [
+    'https://www.googleapis.com/auth/plus.login',
+    'https://www.googleapis.com/auth/plus.profile.emails.read'] }));
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/error' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+
 
 app.use('/', indexRouter);
 
