@@ -146,20 +146,19 @@ app.use('/privacy_policy', function(req, res){
 });
 
 app.use('/google31dcdb96089a048f.html', function(req, res){
-  res.sendFile('public/google31dcdb96089a048f.htmll');
+  res.sendFile('public/google31dcdb96089a048f.html');
 });
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: [
     'https://www.googleapis.com/auth/plus.login',
-    'https://www.googleapis.com/auth/plus.profile.emails.read'] }));
+    'https://www.googleapis.com/auth/plus.profile.emails.read' ] } ));
 
-app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/error' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
+app.get('/auth/google/callback', passport.authenticate( 'google', {
+    successRedirect: '/',
+    failureRedirect: '/error'
+  })
+);
 
 
 app.use('/', indexRouter);
