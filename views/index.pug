@@ -1,17 +1,17 @@
 extends layout
 
 block content
-  // navigation
+  // Navigation
   nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
     .container
-      a.navbar-brand.js-scroll-trigger(href='#page-top') Comenzar Recorrido 
+      a.navbar-brand.js-scroll-trigger(href='#page-top') Inicio de Recorrido
       button.navbar-toggler.navbar-toggler-right(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
         | Menu
         i.fas.fa-bars
       #navbarResponsive.collapse.navbar-collapse
         ul.navbar-nav.ml-auto
           li.nav-item
-            a.nav-link.js-scroll-trigger(href='#about') Nosotros 
+            a.nav-link.js-scroll-trigger(href='#about') Nosotros
           li.nav-item
             a.nav-link.js-scroll-trigger(href='#projects') Bicicletas
           li.nav-item
@@ -20,25 +20,25 @@ block content
   header.masthead
     .container.d-flex.h-100.align-items-center
       .mx-auto.text-center
-        h1.mx-auto.my-0.text-uppercase Red Bicicletas
-        h2.text-white-50.mx-auto.mt-2.mb-5 La Primera Comunidad Online de Ciclistas Urbanos
-        a.btn.btn-primary.js-scroll-trigger(href='#about') Comenzar 
+        h1.mx-auto.my-0.text-uppercase Redes Bicicletas
+        h2.text-white-50.mx-auto.mt-2.mb-5 La primera comunidad Online de Ciclistas Urbanos.
+        a.btn.btn-primary.js-scroll-trigger(href='#about') Comenzar
   // About
   section#about.about-section.text-center
     .container
       .row
         .col-lg-8.mx-auto
-          h2.text-white.mb-4 Built with Bootstrap 4
+          h2.text-white.mb-4 Comunidad Ciclista de Margarita
           p.text-white-50
-            | Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            a(href='https://startbootstrap.com/theme/grayscale/') the preview page
-            |                             . The theme is open source, and you can use it for any purpose, personal or commercial.
-      img.img-fluid(src='/img/ipad.png' alt='')
+            | Somos la primera comunidad organizada de Ciclistas de la Isla de Margarita, cuyo objetivo es disfrutar de nuestro deporte favorito, el ciclismo!
+            a(href='https://startbootstrap.com/theme/grayscale/') pincha aqui para saber más
+            | . Siguemos para conocer más sobre nosotros y distrutes de nuestro deporte.
+      img.img-fluid(src='assets/img/ipad.png' alt='...')
   // Projects
   section#projects.projects-section.bg-light
     .container
       #main_map
-  // Signup
+        // Signup
   section#signup.signup-section
     .container
       .row
@@ -83,13 +83,13 @@ block content
           i.fab.fa-github
   // Footer
   footer.footer.bg-black.small.text-center.text-white-50
-    .container Copyright &copy; Your Website 2020
+    .container Copyright &copy; Your Website 2021
   // Bootstrap core JS
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
-  script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js')
+  script(src='https://code.jquery.com/jquery-3.5.1.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js')
   // Third party plugin JS
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js')
   // Core theme JS
-  script(src='/javascript/scripts.js')
-  script(src='/javascript/map.js')
+  script(src='js/scripts.js')
+  script(src='javascript/map.js')
 
