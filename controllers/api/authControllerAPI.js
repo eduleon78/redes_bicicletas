@@ -1,4 +1,4 @@
-const usuario = require('../../models/usuario');
+const Usuario = require('../../models/usuario');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -8,12 +8,12 @@ module.exports = {
         usuario.findOne({email:req.body.email}, function(err, userInfo){
             if(err){
                 next(err);
-            }else{
-                if (userInfo == null) { return res.status(401).json({status:"error", message: "Invalido email/password", data:null}); }
-                if(userInfo != null && bcrypt.compareSync(req.body.password, userInfo.password)) {
-                    
-                        const token = jwt.sign({id: usuario._id}, req.app.get('secretKey'), { expiresIn: '7d'});
-                        res.status(200).json({message: "usuario encontrado!", data:{usuario: usuario, token:token}});
+            }else {
+                if (userInfo === null) { return res.status(401).json({status:"error", message: "Invalido email/password", data:null}); }
+                
+                if(userInfo != null && bcrypt.compareSync(req.body.password, userInfo.password)) {                    
+                    const token = jwt.sign( {id: usuario._id}, req.app.get('secretKey'), { expiresIn: '7d'});
+                        res.status(200).json( {message: "usuario encontrado!", data:{usuario: usuario, token:token}});
                     
                 }else{
                     res.status(401).json({status:"error", message: "invalido email/password", data:null});
