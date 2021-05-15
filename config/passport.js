@@ -41,7 +41,7 @@ passport.use(new GoogleStrategy({
   function(accessToken, refreshToken, profile, cb) {
       consolde.log(profile);
 
-      usuario.findOneOnCreateByGoogle(profile, function (err, user) {
+      Usuario.findOneOnCreateByGoogle(profile, function (err, user) {
         return cb(err, user);
     });
   }

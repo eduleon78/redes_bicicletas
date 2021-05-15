@@ -107,7 +107,7 @@ usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
 
 usuarioSchema.statics.findOneOrCreateByGoogle = function findOneOrCreate(condition, callback) {
     const self = this;
-    console.log('condition: ', condition)
+    console.log(condition)
     self.findOne({
         $or:[
             {'googleId': condition.id},{'email': condition.emails[0].value}
@@ -122,7 +122,7 @@ usuarioSchema.statics.findOneOrCreateByGoogle = function findOneOrCreate(conditi
                 values.email = condition.emails[0].value;
                 values.nombre = condition.displayName || 'SIN NOMBRE';
                 values.verificado = true;
-                values.password = crypto.randomBytes(16).toString('hex'); //condition.id;
+                values.password = condition.__json.etag;
                 console.log('--------------- VALUES --------------------');
                 console.log(values);
                 self.create(values, (err, result) => {

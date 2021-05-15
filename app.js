@@ -146,7 +146,7 @@ app.use('/privacy_policy', function(req, res){
   res.sendFile('public/policy_privacy.html');
 });
 
-app.use('/google31dcdb96089a048f.html', function(req, res){
+app.use('/google31dcdb96089a048f', function(req, res){
   res.sendFile('public/google31dcdb96089a048f.html');
 });
 
