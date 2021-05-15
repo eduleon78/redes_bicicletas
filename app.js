@@ -39,7 +39,7 @@ if(process.env.NODE_ENV === 'development'){
 let app = express();
 app.set('secretKey', 'jwt_pwd_!!123123');
 app.use(session({
-  app: { maxAge: 240 + 60 + 1000 },
+  app: { maxAge: 240 * 60 * 60 * 1000 },
   store: store,
   saveUninitialized: true,
   resave: 'true',
@@ -102,7 +102,7 @@ app.post('forgotPassword', function(req, res){
       console.log('session/forgotPasswordMessage');
     });
 
-    res.render('session/fortgotPasswordMess')
+    res.render('session/forgotPasswordMessage')
   });
 });
 
