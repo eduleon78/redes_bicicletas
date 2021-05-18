@@ -19,8 +19,8 @@ var bicicletasAPIRouter = require('./routes/api/bicicletas');
 var usuariosAPIRouter = require('./routes/api/usuarios');
 var authAPIRouter = require('./routes/api/auth');
 
-const usuario = require('./models/usuario');
-const token = require('./models/token');
+const Usuario = require('./models/usuario');
+const Token = require('./models/token');
 
 let store;
 if(process.env.NODE_ENV === 'development'){
@@ -36,8 +36,9 @@ if(process.env.NODE_ENV === 'development'){
   });
 }
 
-let app = express();
+var app = express();
 app.set('secretKey', 'jwt_pwd_!!123123');
+
 app.use(session({
   app: { maxAge: 240 * 60 * 60 * 1000 },
   store: store,
@@ -47,7 +48,6 @@ app.use(session({
 }))
 
 var mongoose = require('mongoose');
-
 //mongodb+srv://admin:<759fDiB79D7b82Uenpm>@redes-bicicletas.6i9jj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // si estoy enn el ambiente de desarrollo usar
 //var mongoDB = 'mongoDB://localhost/redes_bicicletas';
@@ -75,10 +75,11 @@ app.get('/login', function(req, res){
 });
 
 app.post('/login', function(req, res, next){
-  passport.authenticate('local', function(err, user, info){
+  passport.authenticate('local', function(err, usuario, info){
     if (err) return next(err);
     if (!usuario) return res.render('session/login'), {info};
     req.login(usuario, function(err){
+      if (err) return next(err);
       return res.redirect('/');
     });
   })(req, res, next);
@@ -133,6 +134,7 @@ Usuario.findOne({ email: req.body.email }, function (err, usuario) {
     });
   });
 
+
 app.use('/usuarios', usuariosRouter);
 app.use('/token', tokenRouter);
 
@@ -141,6 +143,10 @@ app.use('/bicicletas', loggedIn, bicicletasRouter);
 app.use('/api/auth', authAPIRouter);
 app.use('/api/bicicletas', validarUsurio, bicicletasAPIRouter);
 app.use('/api/usuarios', usuariosAPIRouter);
+
+
+
+app.use('/', indexRouter);
 
 app.use('/privacy_policy', function(req, res){
   res.sendFile('public/policy_privacy.html');
@@ -153,16 +159,19 @@ app.use('/google31dcdb96089a048f', function(req, res){
 app.get('/auth/google',
   passport.authenticate('google', { scope: [
     'https://www.googleapis.com/auth/plus.login',
-    'https://www.googleapis.com/auth/plus.profile.emails.read' ] } ));
-
-app.get('/auth/google/callback', passport.authenticate( 'google', {
-    successRedirect: '/',
-    failureRedirect: '/error'
+    'https://www.googleapis.com/auth/plus.profile.emails.read',
+    'profile',
+    'email'
+   ],
   })
 );
 
-
-app.use('/', indexRouter);
+app.get('/auth/google/callback', 
+    passport.authenticate( 'google', {
+        successRedirect: '/',
+        failureRedirect: '/error'
+  })
+);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -196,9 +205,7 @@ function validarUsurio(req, res, next){
     }else{
 
       req.body.userId = decoded.id;
-
       console.log('jwt verify: ' + decoded);
-
       next();
     }
   });

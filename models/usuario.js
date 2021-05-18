@@ -65,7 +65,7 @@ usuarioSchema.methods.resetPassword = function(cb) {
         from: 'eduleon78@gmail.com',
         to: email_destination,
         subject: 'Reseteo de password de cuenta',
-        text: 'Hola, \n\n' + 'Por favor para resetear el password de su cuenta haga click en este link: \n' + 'http://localhost:3000' + '\/resetPassword\/' + token.token + '\n'
+        text: 'Hola, \n\n' + 'Por favor para resetear el password de su cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/resetPassword\/' + token.token + '\n'
       };
   
       mailer.sendMail(mailOptions, function(err) {

@@ -36,7 +36,7 @@ describe('Testing Bicicletas', function () {
     describe('Bicicleta.allBicis', () => {
         it('comienza vacia', (done) => {
             Bicicleta.allBicis(function(err, bicis){
-                expect(bicis.lenght).toBe(0);
+                expect(bicis.length).toBe(0);
                 done();
             });
         });
@@ -48,7 +48,7 @@ describe('Testing Bicicletas', function () {
             Bicicleta.add(aBici, function(err, newBici){
                 if(err) console.log(err);
                 Bicicleta.allBicis(function(err, bicis){
-                    expect(bicis.lenght).toEqual(1);
+                    expect(bicis.length).toEqual(1);
                     expect(bicis[0].code).toEqual(aBici.code);
 
                     done();

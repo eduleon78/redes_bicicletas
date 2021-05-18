@@ -1,72 +1,32 @@
+link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet')
+script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
 head
-  title Login V15
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  meta(name='google-site-verification' content='google31dcdb96089a048f')
-  // ===============================================================================================
-  link(rel='icon' type='image/png' href='images/icons/favicon.ico')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='vendor/bootstrap/css/bootstrap.min.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='fonts/font-awesome-4.7.0/css/font-awesome.min.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='vendor/animate/animate.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='vendor/css-hamburgers/hamburgers.min.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='vendor/animsition/css/animsition.min.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='vendor/select2/select2.min.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='vendor/daterangepicker/daterangepicker.css')
-  // ===============================================================================================
-  link(rel='stylesheets' type='text/css' href='stylesheets/css/util.css')
-  link(rel='stylesheets' type='text/css' href='stylesheets/css/main.css')
-  // ===============================================================================================
+  link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet')
+  script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  link(rel='stylesheet', href='../../stylesheets/login.css')
+  meta(name='google-site-verification' content='pxOa2Qv7Wq0cQ78SbERxoOVDxJ-XbKHZL8rvLmki3xs')
 
-  .limiter
-    .container-login100
-      .wrap-login100
-        .login100-form-title(style='background-image: url(images/bg-02.jpg);')
-          span.login100-form-title-1
-            | Sign In
-        form.login100-form.validate-form
-          .wrap-input100.validate-input.m-b-26(data-validate='Username is required')
-            span.label-input100 Username
-            input.input100(type='text' name='username' placeholder='Enter username')
-            span.focus-input100
-          .wrap-input100.validate-input.m-b-18(data-validate='Password is required')
-            span.label-input100 Password
-            input.input100(type='password' name='pass' placeholder='Enter password')
-            span.focus-input100
-          .flex-sb-m.w-full.p-b-30
-            .contact100-form-checkbox
-              input#ckb1.input-checkbox100(type='checkbox' name='remember-me')
-              label.label-checkbox100(for='ckb1')
-                | Remember me
-            div
-              a.txt1(href='/forgotPassword')
-                | Forgot Password?
-          .container-login100-form-btn
-            button.login100-form-btn
-              | Login
+body#LoginForm
+  .container
+    .login-form
+      .main-div
+        .panel
+          if info && info.message 
+            div.alert.alert-danger
+              = info.message
+          h2 Admin Login
+          p Por favor, ingrese su email and password
+        form#Login(action='/login' method='post')
+          .form-group
+            input#username.form-control(type='email' placeholder='Email Address' name="username")
+          .form-group
+            input#password.form-control(type='password' placeholder='Password' name="password")
+          .forgot
+            a(href='/forgotPassword') Olvidé mi password      
+
+          button.btn.btn-primary(type='submit') Login
           br
-          a(href='/auth/google') Login con Google
-  // ===============================================================================================
-  script(src='vendor/jquery/jquery-3.2.1.min.js')
-  // ===============================================================================================
-  script(src='vendor/animsition/js/animsition.min.js')
-  // ===============================================================================================
-  script(src='vendor/bootstrap/js/popper.js')
-  script(src='vendor/bootstrap/js/bootstrap.min.js')
-  // ===============================================================================================
-  script(src='vendor/select2/select2.min.js')
-  // ===============================================================================================
-  script(src='vendor/daterangepicker/moment.min.js')
-  script(src='vendor/daterangepicker/daterangepicker.js')
-  // ===============================================================================================
-  script(src='vendor/countdowntime/countdowntime.js')
-  // ===============================================================================================
-  script(src='js/main.js')
+          br
+          a(href='/auth/google') Log in con Google
