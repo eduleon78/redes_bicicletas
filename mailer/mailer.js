@@ -22,11 +22,11 @@ if (process.env.NODE_ENV === 'production'){
     }else {
         // all emails are catched by ethereal.email
         mailConfig = {
-            host: 'smtp.ethereal.mail',
+            host: 'smtp.ethereal.email',
             port: 587,
             auth: {
-                user: process.env.ethereal_user,
-                pass: process.env.ethereal_pwd
+                user: process.env.ETHEREAL_USER,
+                pass: process.env.ETHEREAL_PWD
             }
         };
     }

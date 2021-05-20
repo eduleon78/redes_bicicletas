@@ -33,7 +33,7 @@ block content
                 = errors.password.message
     .form-group
         label(for='confirm_pwd') Confirmar Password: 
-        input#confirm_pwd.form-control(type='password' name='confirm_password' class=errors.confirm_password ? 'is-invalid' : '')
+        input#confirm_pwd.form-control(type='password' name='confirm_password' class= errors.confirm_password ? 'is-invalid' : '')
         if errors.confirm_password
             small#confirm_passwordHelp.test-danger
                 = errors.confirm_password.message

@@ -1,16 +1,17 @@
 var mongoose = require('mongoose');
-var Reserva = require('./reserva');
 const uniqueValidator = require('mongoose-unique-validator');
-var Schema = mongoose.Schema;
+var Reserva = require('./reserva');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
+const saltRounds = 10;
+
 const Token = require('../models/token');
 const mailer = require('../mailer/mailer');
 
-const saltRounds = 10;
+var Schema = mongoose.Schema;
 
 const validateEmail = function(email) {
-    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return re.test(email);
 };
 
@@ -26,15 +27,15 @@ var usuarioSchema = new Schema({
         required: [true, 'El email es obligatorio'],
         lowercase: true,
         unique: true,
-        validate: [validateEmail, 'Por favor, ingrese un email valido'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/]
+        validate: [validateEmail, 'Por favor, ingrese un email válido'],
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]
     },
     password: {
         type: String,
         required: [true, 'El password es obligatorio']
     },
-    passwordRestToken: String,
-    passwordRestTokenExpires: Date,
+    passwordResetToken: String,
+    passwordResetTokenExpires: Date,
     verificado: {
         type: Boolean,
         default: false
@@ -62,7 +63,7 @@ usuarioSchema.methods.resetPassword = function(cb) {
       if(err) return cb(err); 
   
       const mailOptions = {
-        from: 'eduleon78@gmail.com',
+        from: 'no-replay@redesbicicletas.com',
         to: email_destination,
         subject: 'Reseteo de password de cuenta',
         text: 'Hola, \n\n' + 'Por favor para resetear el password de su cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/resetPassword\/' + token.token + '\n'
@@ -91,7 +92,7 @@ usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
         if (err) { return console.log(err.message); }
 
         const mailOptions = {
-            from: 'eduleon78@gmail.com',
+            from: 'no-replay@redesbicicletas.com',
             to: email_destination, 
             subject: 'verificacion de cuenta',
             text: 'hola,\n\n' + 'Por favor, para verificar tu cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '.\n'

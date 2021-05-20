@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = {
     authenticate: function(req, res, next) {
-        usuario.findOne( {email:req.body.email}, function(err, userInfo){
+        Usuario.findOne( {email:req.body.email}, function(err, userInfo){
             if(err){
                 next(err);
             }else {
@@ -13,7 +13,7 @@ module.exports = {
                 
                 if(userInfo != null && bcrypt.compareSync(req.body.password, userInfo.password)) {                    
                     const token = jwt.sign( {id: usuario._id}, req.app.get('secretKey'), { expiresIn: '7d'});
-                        res.status(200).json( {message: "usuario encontrado!", data:{usuario: usuario, token:token}});
+                        res.status(200).json( {message: "usuario encontrado!", data:{usuario: userInfo, token:token}});
                     
                 }else{
                     res.status(401).json({status:"error", message: "invalido email/password", data:null});

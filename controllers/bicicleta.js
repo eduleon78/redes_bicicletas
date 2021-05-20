@@ -35,11 +35,11 @@ exports.bicicleta_update_post = function(req, req){
         modelo: req.body.color,
         ubicacion: [req.body.lat, req.body.lng]
     };
-    Bicicleta.findByIdAndoUpdate(req.params.id, update_values, (err, bicicleta) => {
+    Bicicleta.findByIdAndUpdate(req.params.id, update_values, (err, bicicleta) => {
         //if there is a error we render the view with error
         if (err) {
             console.log(err);
-            res.render('bicicleta/update', { errors: err.errors, bicicleta})
+            res.render('bicicletas/update', { errors: err.errors, bicicleta})
         }else {
         //If everything is ok we render to bicicletas
             res.redirect('bicicletas');

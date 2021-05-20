@@ -40,7 +40,7 @@ var app = express();
 app.set('secretKey', 'jwt_pwd_!!123123');
 
 app.use(session({
-  app: { maxAge: 240 * 60 * 60 * 1000 },
+  cookie: { maxAge: 240 * 60 * 60 * 1000 },
   store: store,
   saveUninitialized: true,
   resave: 'true',
@@ -90,13 +90,13 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-app.get('forgotPassword', function(req, res){
+app.get('/forgotPassword', function(req, res){
   res.render('session/forgotPassword');
 });
 
-app.post('forgotPassword', function(req, res){
-  Usuario.finOne({ email: req.body.email }, function (err, usuario){
-    if (!usuario) return res.render('session/forgotPassword', {info: {message: 'No existe'}});
+app.post('/forgotPassword', function(req, res){
+  Usuario.findOne({ email: req.body.email }, function (err, usuario){
+    if (!usuario) return res.render('session/forgotPassword', { info: {message: 'No existe el email para un usuario existente.'}});
 
     usuario.resetPassword(function(err){
       if (err) return next(err);
