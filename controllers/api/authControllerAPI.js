@@ -9,12 +9,12 @@ module.exports = {
             if(err){
                 next(err);
             }else {
-                if (userInfo === null) { return res.status(401).json({status:"error", message: "Invalido email/password", data:null}); }
-                
-                if(userInfo != null && bcrypt.compareSync(req.body.password, userInfo.password)) {                    
-                    const token = jwt.sign( {id: usuario._id}, req.app.get('secretKey'), { expiresIn: '7d'});
-                        res.status(200).json( {message: "usuario encontrado!", data:{usuario: userInfo, token:token}});
-                    
+                if (userInfo === null) { return res.status(401).json({status:"error", message: "Invalido email/password", data:null}); }                
+                if(userInfo != null && bcrypt.compareSync(req.body.password, userInfo.password)) {
+                  
+                    const token = jwt.sign({id: userInfo._id}, req.app.get('secretKey'), { expiresIn: '7d'});
+                    res.status(200).json( {message: "usuario encontrado!", data:{usuario: userInfo, token:token}});
+                            
                 }else{
                     res.status(401).json({status:"error", message: "invalido email/password", data:null});
                 }

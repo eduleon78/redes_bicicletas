@@ -37,7 +37,7 @@ if(process.env.NODE_ENV === 'development'){
 }
 
 var app = express();
-app.set('secretKey', 'jwt_pwd_!!123123');
+app.set('secretKey', 'jwt_pwd_!!223344');
 
 app.use(session({
   cookie: { maxAge: 240 * 60 * 60 * 1000 },
@@ -108,11 +108,11 @@ app.post('/forgotPassword', function(req, res){
 });
 
 app.get('/resetPassword/:token', function(req, res, next){
-  token.finOne({ token: req.params.token }, function (err, token){
-    if (!usuario) return res.status(400).send({ type: 'not-verified', msg: 'No existe un usuario'});
+  token.findOne({ token: req.params.token }, function (err, token){
+    if (!token) return res.status(400).send({ type: 'not-verified', msg: 'No existe un usuario asociado al token. Verifique que su token no haya expirado.'});
 
     Usuario.findById(token._userId, function(err, usuario){
-      if (!usuario) return res.status(400).send({ msg: 'No existe un usuario'}); ;
+      if (!usuario) return res.status(400).send({ msg: 'No existe un usuario asociado al token.'});
       res.render('session/resetPassword', {errors: {}, usuario: usuario});
     });
   });
@@ -120,14 +120,14 @@ app.get('/resetPassword/:token', function(req, res, next){
 
 app.post('/resetPassword', function(req, res){
   if(req.body.password != req.body.confirm_password) {
-    res.render('session/resetPassword', {errors: {confirm_password: {message: 'no coincide'}}});
+    res.render('session/resetPassword', {errors: {confirm_password: { message: 'no coincide el password ingresado'}}, usuario: new Usuario({email: req.body.email})});
     return;
   }
 Usuario.findOne({ email: req.body.email }, function (err, usuario) {
   usuario.password = req.body.password;
   usuario.save(function(err){
       if (err) {
-        res.render('session/resetPasswprd', {errors: err.errors, usuario: new Usuario({email: req.body.email})});
+        res.render('session/resetPassword', {errors: err.errors, usuario: new Usuario({email: req.body.email})});
       }else{
         res.redirect('/login');
       }});
@@ -141,7 +141,7 @@ app.use('/token', tokenRouter);
 app.use('/bicicletas', loggedIn, bicicletasRouter);
 
 app.use('/api/auth', authAPIRouter);
-app.use('/api/bicicletas', validarUsurio, bicicletasAPIRouter);
+app.use('/api/bicicletas', validarUsuario, bicicletasAPIRouter);
 app.use('/api/usuarios', usuariosAPIRouter);
 
 
@@ -193,19 +193,21 @@ function loggedIn(req, res, next) {
   if (req.user){
     next();
   }else{
-    console.log('usuario sin loguearse');
+    console.log('Usuario sin loguearse');
     res.redirect('/login');
   }
 };
 
-function validarUsurio(req, res, next){
+function validarUsuario(req, res, next){
   jwt.verify(req.headers['x-access-token'], req.app.get('secretKey'), function(err, decoded){
     if(err){
       res.json({status:"error", message: err.message, data:null});
     }else{
 
       req.body.userId = decoded.id;
+
       console.log('jwt verify: ' + decoded);
+      
       next();
     }
   });

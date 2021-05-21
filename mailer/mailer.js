@@ -6,7 +6,7 @@ let mailConfig;
 if (process.env.NODE_ENV === 'production'){
     const options = {
         auth: {
-            api_key: process.env.SENDGRIP_API_SECRET
+          api_key: process.env.SENDGRID_API_SECRET
         }
     }
     mailConfig = sgTransport(options);
@@ -15,18 +15,18 @@ if (process.env.NODE_ENV === 'production'){
         console.log('XXXXXXXXXXXXXXXX');
         const options = {
             auth: {
-                api_key: process.env.SENDGRIP_API_SECRET
+                api_key: process.env.SENDGRID_API_SECRET
             }
         }
         mailConfig = sgTransport(options);
     }else {
         // all emails are catched by ethereal.email
         mailConfig = {
-            host: 'smtp.ethereal.email',
+            host: "smtp.ethereal.email",
             port: 587,
             auth: {
-                user: process.env.ETHEREAL_USER,
-                pass: process.env.ETHEREAL_PWD
+                user: process.env.ethereal_user,
+                pass: process.env.ethereal_pwd
             }
         };
     }
