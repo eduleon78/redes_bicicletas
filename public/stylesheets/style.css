@@ -1,7 +1,12 @@
+a{
+  color: #00b7ff;
+}
+
 #main_map {
     height: 600px;
   }
   
-  body {
+body {
+    padding: 50px;
     padding-top: 5ren;
   }

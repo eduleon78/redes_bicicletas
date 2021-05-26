@@ -92,7 +92,7 @@ usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
         if (err) { return console.log(err.message); }
 
         const mailOptions = {
-            from: 'no-replay@redesbicicletas.com',
+            from: 'no-reply@redesbicicletas.com',
             to: email_destination, 
             subject: 'verificacion de cuenta',
             text: 'hola,\n\n' + 'Por favor, para verificar tu cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '.\n'

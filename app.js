@@ -44,7 +44,7 @@ app.use(session({
   saveUninitialized: true,
   resave: 'true',
   secret: 'redes_bici_!!!***!"-!"-!"-!"-!"-!"-!-123123'
-}))
+}));
 
 var mongoose = require('mongoose');
 //mongodb+srv://admin:<759fDiB79D7b82Uenpm>@redes-bicicletas.6i9jj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
@@ -122,17 +122,16 @@ app.post('/resetPassword', function(req, res){
     res.render('session/resetPassword', {errors: {confirm_password: { message: 'no coincide el password ingresado'}}, usuario: new Usuario({email: req.body.email})});
     return;
   }
-Usuario.findOne({ email: req.body.email }, function (err, usuario) {
-  usuario.password = req.body.password;
-  usuario.save(function(err){
+  Usuario.findOne({ email: req.body.email }, function (err, usuario) {
+    usuario.password = req.body.password;
+    usuario.save(function(err){
       if (err) {
         res.render('session/resetPassword', {errors: err.errors, usuario: new Usuario({email: req.body.email})});
       }else{
         res.redirect('/login');
       }});
-    });
   });
-
+});
 
 app.use('/usuarios', usuariosRouter);
 app.use('/token', tokenRouter);
