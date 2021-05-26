@@ -12,7 +12,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 //L.marker([10.968382,-63.866174]).addTo(map);
 //L.marker([10.975272,-63.866442]).addTo(map);
 
-$ajax({
+$.ajax({
     dataType: "json",
     url: "api/bicicletas",
     success: function(result){

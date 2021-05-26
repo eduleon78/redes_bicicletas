@@ -1996,3 +1996,243 @@
 {"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":10608,"time":"2021-05-21T00:55:26.583Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
 {"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":10608,"time":"2021-05-21T00:55:26.593Z","msg":"Agent state changed from connected to started."}
 {"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":10608,"time":"2021-05-21T00:55:27.603Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:15.829Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:16.667Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:17.605Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:17.605Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:27.305Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:27.306Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BaL5l3zZEGLAAC-YE0GqLVBgpwzcAAgBAAAnIQEAAB3EAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:27.306Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:27.312Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:27.324Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7620,"time":"2021-05-21T01:27:28.334Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:45.425Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:46.261Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:46.826Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:46.826Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:54.746Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:54.747Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BRLCoxP1p1juAC-YE0GqLVBgpw5EAAgBAAAnIQEAAEGcAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:54.747Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:54.751Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:54.758Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16796,"time":"2021-05-21T01:33:55.767Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:14.965Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:16.244Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:16.954Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:16.954Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:24.852Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:24.852Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BU04bpax3_uVAC-YE0GqLVBgqDLEAAgBAAAnIQEAADl8AgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:24.853Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:24.856Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:24.862Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":14716,"time":"2021-05-21T22:21:25.863Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:13.107Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:13.924Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:14.975Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:14.975Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:23.912Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:23.913Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BZW9NojJl8gBAC-YE0GqLVBgqDN4AAgBAAAnIQEAACOYAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:23.913Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:23.919Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:23.931Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9112,"time":"2021-05-21T22:24:24.947Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:30:54.768Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:30:56.214Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:30:57.496Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:30:57.496Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:31:08.879Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:31:08.879Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BSU68ZuWI0AhAC-YE0GqLVBgqDUcAAgBAAAnIQEAAB6wAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:31:08.880Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:31:08.884Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:31:08.890Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":7856,"time":"2021-05-21T22:31:09.898Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:20.500Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:21.090Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:21.748Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:21.748Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:30.039Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:30.040Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BWv1gwak3poOAC-YE0GqLVBgqDhkAAgBAAAnIQEAAAa4AgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:30.041Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:30.047Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:30.059Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1720,"time":"2021-05-21T22:45:31.064Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:45:56.256Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:45:57.163Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:45:58.101Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:45:58.101Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:46:06.158Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:46:06.159Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BYu1lan9l3JhAC-YE0GqLVBgqDigAAgBAAAnIQEAADS0AgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:46:06.159Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:46:06.165Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:46:06.177Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13492,"time":"2021-05-21T22:46:07.188Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:23.655Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:24.423Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:24.956Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:24.956Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:34.876Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:34.876Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BdBdBPi3SuCyAC-YE0GqLVBgqDigAAgBAAAnIQEAACzkAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:34.877Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:34.880Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:34.892Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":11492,"time":"2021-05-21T22:46:35.906Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:10.298Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:10.981Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:11.683Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:11.683Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:20.840Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:20.841Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BRHW-3bHBQdLAC-YE0GqLVBgqDjcAAgBAAAnIQEAACTAAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:20.841Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:20.845Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:20.851Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9408,"time":"2021-05-21T22:47:21.855Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":476,"time":"2021-05-21T22:47:58.538Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":476,"time":"2021-05-21T22:47:59.735Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":476,"time":"2021-05-21T22:48:00.793Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":476,"time":"2021-05-21T22:48:00.794Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:30.184Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:31.031Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:31.818Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:31.819Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:39.151Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:39.152Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BXsaxKTeJy2GAC-YE0GqLVBgqDkYAAgBAAAnIQEAADJoAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:39.152Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:39.158Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:39.170Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":12904,"time":"2021-05-21T22:48:40.173Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13616,"time":"2021-05-21T22:49:04.044Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13616,"time":"2021-05-21T22:49:04.747Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13616,"time":"2021-05-21T22:49:05.842Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":13616,"time":"2021-05-21T22:49:05.843Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:13.400Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:14.392Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:15.347Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:15.347Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:23.019Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:23.020Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BYNxkeefu4BYAC-YE0GqLVBgqDlUAAgBAAAnIQEAAAXAAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:23.021Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:23.026Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:23.038Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1472,"time":"2021-05-21T22:49:24.051Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T22:49:32.260Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T22:49:33.070Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T22:49:33.656Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T22:49:33.656Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:47.316Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:48.212Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:48.719Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:48.719Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:56.758Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:56.760Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BYR18sDhEqOEAC-YE0GqLVBgqDlUAAgBAAAnIQEAABrUAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:56.760Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:56.770Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:56.783Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":6868,"time":"2021-05-21T22:49:57.795Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:12.037Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:13.047Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:13.886Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:13.886Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:26.944Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:26.945Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BTd519OfYoIiAC-YE0GqLVBgqDmQAAgBAAAnIQEAABJoAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:26.945Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:26.951Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:26.963Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4712,"time":"2021-05-21T22:50:27.974Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1796,"time":"2021-05-21T22:50:38.972Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1796,"time":"2021-05-21T22:50:39.945Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1796,"time":"2021-05-21T22:50:40.666Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1796,"time":"2021-05-21T22:50:40.667Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:51.288Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:52.347Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:52.931Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:52.931Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:59.373Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:59.374Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BesKgMvOX54VAC-YE0GqLVBgqDmQAAgBAAAnIQEAAAdIAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:59.375Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:59.381Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:50:59.394Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":1864,"time":"2021-05-21T22:51:00.400Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:34.565Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:35.548Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:36.401Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:36.402Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:44.783Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:44.784Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BdkoIcWrz2hgAC-YE0GqLVBgqDr4AAgBAAAnIQEAAED8AgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:44.785Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:44.790Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:44.802Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16636,"time":"2021-05-21T22:56:45.807Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:23.684Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:24.566Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:25.442Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:25.442Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:34.729Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:34.729Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BaGel6WhSouHAC-YE0GqLVBgqDvoAAgBAAAnIQEAAECgAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:34.730Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:34.733Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:34.740Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16544,"time":"2021-05-21T23:00:35.745Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:40.288Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:41.138Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:42.075Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:42.075Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:50.930Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:50.931Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BdF-qMOkkGcSAC-YE0GqLVBgqDvoAAgBAAAnIQEAAANUAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:50.932Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:50.937Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:50.949Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":852,"time":"2021-05-21T23:00:51.955Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4440,"time":"2021-05-21T23:00:57.674Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4440,"time":"2021-05-21T23:00:58.565Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4440,"time":"2021-05-21T23:00:59.384Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":4440,"time":"2021-05-21T23:00:59.384Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:12.745Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:13.687Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:14.260Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:14.260Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:23.599Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:23.600Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BaSMWlao4tNeAC-YE0GqLVBgqDwkAAgBAAAnIQEAAEBoAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:23.600Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:23.603Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:23.612Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":16488,"time":"2021-05-21T23:01:24.627Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:01:49.273Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:01:50.278Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:01:50.999Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:01:51.000Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:02:00.237Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:02:00.238Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BfHYZ0jVyvDPAC-YE0GqLVBgqDwkAAgBAAAnIQEAACbAAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:02:00.238Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:02:00.241Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:02:00.251Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9920,"time":"2021-05-21T23:02:01.261Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:09:59.125Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:00.019Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:00.755Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:00.755Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:10.153Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:10.155Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BdqPBiqY0qO7AC-YE0GqLVBgqD5AAAgBAAAnIQEAAD3MAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:10.156Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:10.159Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:10.169Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":15820,"time":"2021-05-21T23:10:11.183Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:36.794Z","msg":"Using New Relic for Node.js. Agent version: 7.4.0; Node version: v14.15.1."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:39.210Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:40.111Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:40.112Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:52.413Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:52.415Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BVt2tRrt-qL3AC-YE0GqLVBgrZNAAAgBAAAnIQEAACVcAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:52.415Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:52.421Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:52.434Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:14:53.443Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":50,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:54.734Z","msg":"Agent endpoint metric_data returned 409 status. Restarting.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:54.735Z","msg":"Restarting collector.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:54.736Z","msg":"Shutting down collector.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:55.109Z","msg":"Agent state changed from started to disconnected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:55.110Z","msg":"Disconnected from New Relic; clearing run ID BVt2tRrt-qL3AC-YE0GqLVBgrZNAAAgBAAAnIQEAACVcAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:55.111Z","msg":"Agent state changed from disconnected to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:57.672Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:57.673Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BQ3X18fk5cQHAC-YE0GqLVBgrZQwAAgBAAAnIQEAACVcAgBBqi1OAwAFNy40LjAAC0F1eGlsaWFyLTAxABByZWRlcy1iaWNpY2xldGFz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:57.673Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3119123/applications/1101671758","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Auxiliar-01","pid":9564,"time":"2021-05-26T00:18:57.674Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}

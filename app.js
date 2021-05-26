@@ -38,7 +38,6 @@ if(process.env.NODE_ENV === 'development'){
 
 var app = express();
 app.set('secretKey', 'jwt_pwd_!!223344');
-
 app.use(session({
   cookie: { maxAge: 240 * 60 * 60 * 1000 },
   store: store,
