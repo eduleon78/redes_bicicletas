@@ -36,7 +36,7 @@ if(process.env.NODE_ENV === 'development'){
   });
 }
 
-var app = express();
+let app = express();
 app.set('secretKey', 'jwt_pwd_!!223344');
 app.use(session({
   cookie: { maxAge: 240 * 60 * 60 * 1000 },
@@ -47,6 +47,8 @@ app.use(session({
 }));
 
 var mongoose = require('mongoose');
+
+
 //mongodb+srv://admin:<759fDiB79D7b82Uenpm>@redes-bicicletas.6i9jj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // si estoy enn el ambiente de desarrollo usar
 //var mongoDB = 'mongoDB://localhost/redes_bicicletas';
@@ -142,8 +144,6 @@ app.use('/api/auth', authAPIRouter);
 app.use('/api/bicicletas', validarUsuario, bicicletasAPIRouter);
 app.use('/api/usuarios', usuariosAPIRouter);
 
-
-
 app.use('/', indexRouter);
 
 app.use('/privacy_policy', function(req, res){
@@ -164,8 +164,7 @@ app.get('/auth/google',
   })
 );
 
-app.get('/auth/google/callback', 
-    passport.authenticate( 'google', {
+app.get('/auth/google/callback', passport.authenticate( 'google', {
         successRedirect: '/',
         failureRedirect: '/error'
   })

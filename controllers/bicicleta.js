@@ -49,7 +49,11 @@ exports.bicicleta_update_post = function(req, req){
 }
 
 exports.bicicleta_delete_post = function(req, res){
-    Bicicleta.removeById(req.body.id);
-
-    res.redirect('/bicicletas');
+    Bicicleta.findByIdAndDelete(req.body.id, (err) => {
+        if (err){
+            next(err);
+        }else{
+            res.redirect('/bicicletas');
+        }
+    });
 }
