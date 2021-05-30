@@ -54,7 +54,7 @@ var mongoose = require('mongoose');
 //var mongoDB = 'mongoDB://localhost/redes_bicicletas';
 //sino usar
 var mongoDB = process.env.MONGO_URI;
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
