@@ -55,7 +55,8 @@ usuarioSchema.pre('save', function(next){
 
 usuarioSchema.methods.validPassword = function(password){
     return bcrypt.compareSync(password, this.password);
-}
+};
+
 usuarioSchema.methods.resetPassword = function(cb) {
     const token = new Token({_userId: this.id, token: crypto.randomBytes(16).toString('hex')});
     const email_destination = this.email;
@@ -70,11 +71,9 @@ usuarioSchema.methods.resetPassword = function(cb) {
       };
   
       mailer.sendMail(mailOptions, function(err) {
-        if(err) { return cb(err); }
-  
+        if(err) { return cb(err); }  
         console.log('Se envió un mail para resetear el password a:  ' + email_destination + '.');
-      });
-  
+      });  
       cb(null);
     });
   }
@@ -96,8 +95,8 @@ usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
             to: email_destination, 
             subject: 'verificacion de cuenta',
             text: 'hola,\n\n' + 'Por favor, para verificar tu cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '.\n'
-
         };
+        
         mailer.sendMail(mailOptions, function (err) {
             if (err) { return console.log(err.message); }
 

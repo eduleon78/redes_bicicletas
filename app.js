@@ -46,19 +46,13 @@ app.use(session({
   secret: 'redes_bici_!!!***!"-!"-!"-!"-!"-!"-!-123123'
 }));
 
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
+main().catch(err => console.log(err));
 
-//mongodb+srv://admin:<759fDiB79D7b82Uenpm>@redes-bicicletas.6i9jj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-// si estoy enn el ambiente de desarrollo usar
-//var mongoDB = 'mongoDB://localhost/redes_bicicletas';
-//sino usar
-var mongoDB = process.env.MONGO_URI;
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
-mongoose.Promise = global.Promise;
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
+async function main() {
+  await mongoose.connect('process.env.MONGO_URI');
+}
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -78,8 +72,8 @@ app.get('/login', function(req, res){
 app.post('/login', function(req, res, next){
   passport.authenticate('local', function(err, usuario, info){
     if (err) return next(err);
-    if (!usuario) return res.render('session/login'), {info};
-    req.login(usuario, function(err){
+    if (!usuario) return res.render('session/login', {info});
+    req.logIn(usuario, function(err){
       if (err) return next(err);
       return res.redirect('/');
     });
@@ -109,7 +103,7 @@ app.post('/forgotPassword', function(req, res){
 });
 
 app.get('/resetPassword/:token', function(req, res, next){
-  token.findOne({ token: req.params.token }, function (err, token){
+  Token.findOne({ token: req.params.token }, function (err, token){
     if (!token) return res.status(400).send({ type: 'not-verified', msg: 'No existe un usuario asociado al token. Verifique que su token no haya expirado.'});
 
     Usuario.findById(token._userId, function(err, usuario){

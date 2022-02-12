@@ -29,7 +29,7 @@ exports.bicicleta_update_get = function(req, res){
     });    
 }
 
-exports.bicicleta_update_post = function(req, req){
+exports.bicicleta_update_post = function(req, res){
     var update_values = {
         color: req.body.color,
         modelo: req.body.color,
@@ -45,7 +45,7 @@ exports.bicicleta_update_post = function(req, req){
             res.redirect('bicicletas');
             return;
         }
-    })
+    });
 }
 
 exports.bicicleta_delete_post = function(req, res){

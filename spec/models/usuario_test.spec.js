@@ -23,7 +23,7 @@ describe('Testing Usuarios', function () {
             if (err) console.log(err);
             Usuario.deleteMany({}, function (err, success) {
                 if (err) console.log(err);
-                BIcicleta.deleteMany({}, function (err, success) {
+                Bicicleta.deleteMany({}, function (err, success) {
                     if (err) console.log(err);
                     done();
                 });

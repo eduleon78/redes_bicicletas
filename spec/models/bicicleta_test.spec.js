@@ -3,12 +3,12 @@ var Bicicleta = require('../../models/bicicleta');
 
 describe('Testing Bicicletas', function () {
     beforeEach(function(done) {
-        var mongoDB = 'mongoDB://localhost/testdb';
+        var mongoDB = 'mongodb://localhost/testdb';
         mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
         const db = mongoose.connection;
         db.on('error', console.error.bind(console, 'connection error'));
-        db.once('open', function () {
+        db.once('open', function() {
             console.log('we are connected to test database');
             done();
         });
@@ -32,7 +32,8 @@ describe('Testing Bicicletas', function () {
             expect(bici.ubicacion[1]).toEqual(-54.1);
         });
     });
-
+    
+    
     describe('Bicicleta.allBicis', () => {
         it('comienza vacia', (done) => {
             Bicicleta.allBicis(function(err, bicis){
@@ -56,5 +57,29 @@ describe('Testing Bicicletas', function () {
             });
         });
     });
-});
+    
+    describe('Bicicleta.findByCode', () => {
+        it('Debe devolver la bici con code 1', (done) => {
+            Bicicleta.allBicis(function(err, bicis){
+                expect(bicis.length).toBe(0);
 
+                var aBici = new Bicicleta({code: 1, color: "verde", modelo: "urbana"});
+                Bicicleta.add(aBici, function(err, newBici){
+                    if (err) console.log(err);
+
+                    var aBici2 = new Bicicleta({code: 2, color: "roja", modelo: "montaña"});
+                    Bicicleta.add(aBici2, function(err, newBici) {
+                        if (err) console.log(err);
+                        Bicicleta.findByCode(1, function (error, targetBici){
+                            expect(targetBici.code).toBe(aBici.code);
+                            expect(targetBici.color).toBe(aBici.color);
+                            expect(targetBici.modelo).toBe(aBici.modelo);
+
+                            done();
+                        });
+                    });
+                });
+            });
+        });
+    });
+});

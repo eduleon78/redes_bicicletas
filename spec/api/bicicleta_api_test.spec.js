@@ -10,9 +10,9 @@ describe("Bicicleta API", () => {
         mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
         var db = mongoose.connection;
-        db.on('error', console.error.bind(console, 'connection error'));
+        db.on('error', console.error.bind(console, 'MongoDB connection error'));
         db.once('open', function() {
-            console.log('we are connecte to test database');
+            console.log('we are connecte to test database!');
         });
     });
 
