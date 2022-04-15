@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
+var uniqueValidator = require('mongoose-unique-validator');
 var Reserva = require('./reserva');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
@@ -55,6 +55,12 @@ usuarioSchema.pre('save', function(next){
 
 usuarioSchema.methods.validPassword = function(password){
     return bcrypt.compareSync(password, this.password);
+}
+
+usuarioSchema.methods.reservar = function(biciId, desde, hasta, cb){
+    var reserva = new Reserva({usuario: this._id, bicicleta: biciId, desde: desde, hasta: hasta});
+    console.log(reserva);
+    reserva.save(cb);
 };
 
 usuarioSchema.methods.resetPassword = function(cb) {
@@ -76,12 +82,6 @@ usuarioSchema.methods.resetPassword = function(cb) {
       });  
       cb(null);
     });
-  }
-
-usuarioSchema.methods.reservar = function(biciId, desde, hasta, cb){
-    var reserva = new Reserva({usuario: this._id, bicicleta: biciId, desde: desde, hasta: hasta});
-    console.log(reserva);
-    reserva.save(cb);
 }
 
 usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
@@ -95,8 +95,7 @@ usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
             to: email_destination, 
             subject: 'verificacion de cuenta',
             text: 'hola,\n\n' + 'Por favor, para verificar tu cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '.\n'
-        };
-        
+        };        
         mailer.sendMail(mailOptions, function (err) {
             if (err) { return console.log(err.message); }
 

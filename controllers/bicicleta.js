@@ -3,7 +3,7 @@ var Bicicleta = require('../models/bicicleta');
 exports.bicicleta_list = function(req, res) {
     Bicicleta.allBicis().exec((err, bicis) => {
         res.render('bicicletas/index', {bicis});
-    })
+    });
 }
 
 exports.bicicleta_create_get = function(req, res){

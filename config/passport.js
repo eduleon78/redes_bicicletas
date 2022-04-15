@@ -24,7 +24,7 @@ passport.use(new FacebookTokenStrategy({
         try {
             Usuario.findOneOrCreateByFacebook(profile, function(err, user){
                 if (err) console.log('err' + err);
-                return done(err, usuario);
+                return done(err, Usuario);
             });
         } catch(errr2){
             console.log(err2);

@@ -9,25 +9,27 @@ head
   meta(name='google-site-verification' content='pxOa2Qv7Wq0cQ78SbERxoOVDxJ-XbKHZL8rvLmki3xs')
 
 body#LoginForm
-  .container
-    .login-form
-      .main-div
-        .panel
-          if info && info.message 
-            div.alert.alert-danger
-              = info.message
-          h2 Admin Login
-          p Por favor, ingrese su email y password
-        form#Login(action='/login' method='post')
-          .form-group
-            input#username.form-control(type='email' placeholder='Email Address' name="username")
-          .form-group
-            input#password.form-control(type='password' placeholder='Password' name="password")
-          .forgot
-            a(href='/forgotPassword') Olvidé mi password
-            br     
+  .container.d-flex.justify-content-center.align-items-center.vh-100
+    .container 
+      .login-form
+        .main-div
+          .panel
+            if info && info.message 
+              div.alert.alert-danger
+                = info.message
+            h2 Admin Login
+            p Por favor, ingrese su email y password
+          form#Login(action='/login' method='post')
+            .form-group
+              input#username.form-control(type='email' placeholder='Email Address' name="username")
+            .form-group
+              input#password.form-control(type='password' placeholder='Password' name="password")
+            .forgot
+              a(href='/forgotPassword') Olvidé mi password
+              br
+              a(href='/usuarios/create') Nuevo Usuario     
 
-          button.btn.btn-primary(type='submit') Login
-          br
-          br
-          a(href='/auth/google') Log in con Google
+            button.btn.btn-primary(type='submit') Login
+            br
+            br
+            a(href='/auth/google') Log in con Google

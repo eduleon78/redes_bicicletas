@@ -23,7 +23,7 @@ const Usuario = require('./models/usuario');
 const Token = require('./models/token');
 
 let store;
-if(process.env.NODE_ENV === 'development'){
+if (process.env.NODE_ENV === 'development'){
   store = new session.MemoryStore;
 }else{
   store = new MongoDBStore({
@@ -46,7 +46,8 @@ app.use(session({
   secret: 'redes_bici_!!!***!"-!"-!"-!"-!"-!"-!-123123'
 }));
 
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
+const { assert } = require('console');
 
 main().catch(err => console.log(err));
 
@@ -192,13 +193,13 @@ function loggedIn(req, res, next) {
 function validarUsuario(req, res, next){
   jwt.verify(req.headers['x-access-token'], req.app.get('secretKey'), function(err, decoded){
     if(err){
-      res.json({status:"error", message: err.message, data:null});
-    }else{
-
+      res.json({status: "error", message: err.message, data: null});
+    }
+    else{ 
       req.body.userId = decoded.id;
 
-      console.log('jwt verify: ' + decoded);
-      
+      console.log('jwt verify: ' + decoded); 
+
       next();
     }
   });
