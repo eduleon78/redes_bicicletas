@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var uniqueValidator = require('mongoose-unique-validator');
+const uniqueValidator = require('mongoose-unique-validator');
 var Reserva = require('./reserva');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
@@ -53,9 +53,9 @@ usuarioSchema.pre('save', function(next){
     next();
 });
 
-usuarioSchema.methods.validPassword = function(password){
-    return bcrypt.compareSync(password, this.password);
-}
+usuarioSchema.methods.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password); 
+};
 
 usuarioSchema.methods.reservar = function(biciId, desde, hasta, cb){
     var reserva = new Reserva({usuario: this._id, bicicleta: biciId, desde: desde, hasta: hasta});
@@ -94,12 +94,12 @@ usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
             from: 'no-reply@redesbicicletas.com',
             to: email_destination, 
             subject: 'verificacion de cuenta',
-            text: 'hola,\n\n' + 'Por favor, para verificar tu cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '.\n'
-        };        
-        mailer.sendMail(mailOptions, function (err) {
-            if (err) { return console.log(err.message); }
+            text: 'hola: \n\n' + 'Por favor, para verificar tu cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '\n'
+        };
 
-            console.log('Se ha enviado un email de bienvenida a: ' + email_destination + ':')
+        mailer.sendMail(mailOptions, function (err) {
+            if (err) console.log(err);
+            console.log('Se ha enviado un email de bienvenida a: ' + email_destination + ':');
         });
     });
 }

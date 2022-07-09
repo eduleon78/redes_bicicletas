@@ -10,7 +10,6 @@ const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const jwt = require('jsonwebtoken');
 
-
 var indexRouter = require('./routes/index');
 var usuariosRouter = require('./routes/usuarios');
 var tokenRouter = require('./routes/token');
@@ -47,13 +46,18 @@ app.use(session({
 }));
 
 var mongoose = require('mongoose');
-const { assert } = require('console');
 
-main().catch(err => console.log(err));
+var mongoDB = process.env.MONGO_URI;
+mongoose.connect(mongoDB, { useUnifiedTopology: true });
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error: "));
+
+/* main().catch(err => console.log(err));
 
 async function main() {
   await mongoose.connect('process.env.MONGO_URI');
-}
+} */
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

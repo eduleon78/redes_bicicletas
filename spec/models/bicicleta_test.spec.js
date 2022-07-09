@@ -21,7 +21,7 @@ describe('Testing Bicicletas', function () {
         });
     });
 
-    describe('Bicicletas.createInstance', () => {
+    describe('Bicicleta.createInstance', () => {
         it('crea una instancia de Bicicleta', () => {
             var bici = Bicicleta.createInstance(1, "verde", "urbana", [-34.5, -54.1]);
 

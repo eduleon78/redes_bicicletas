@@ -1,3 +1,4 @@
+var mongoose = require('mongoose');
 var Bicicleta = require('../../models/bicicleta');
 var request = require('request');
 var server = require('../../bin/www');
