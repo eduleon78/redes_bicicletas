@@ -36,7 +36,9 @@ if (process.env.NODE_ENV === 'development'){
 }
 
 let app = express();
+
 app.set('secretKey', 'jwt_pwd_!!223344');
+
 app.use(session({
   cookie: { maxAge: 240 * 60 * 60 * 1000 },
   store: store,
@@ -48,15 +50,17 @@ app.use(session({
 var mongoose = require('mongoose');
 
 var mongoDB = process.env.MONGO_URI;
-mongoose.connect(mongoDB, { useUnifiedTopology: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
-var db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error: "));
+mongoose.connection.on(
+  "error", 
+  console.error.bind(console, "MongoDB connection error: ")
+);
 
 /* main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('process.env.MONGO_URI');
+  mongoose.connect(process.env.MONGO_URI);
 } */
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -103,7 +107,7 @@ app.post('/forgotPassword', function(req, res){
       console.log('session/forgotPasswordMessage');
     });
 
-    res.render('session/forgotPasswordMessage')
+    res.render('session/forgotPasswordMessage');
   });
 });
 
@@ -112,7 +116,7 @@ app.get('/resetPassword/:token', function(req, res, next){
     if (!token) return res.status(400).send({ type: 'not-verified', msg: 'No existe un usuario asociado al token. Verifique que su token no haya expirado.'});
 
     Usuario.findById(token._userId, function(err, usuario){
-      if (!usuario) return res.status(400).send({ msg: 'No existe un usuario asociado al token.'});
+      if (!usuario) return res.status(400).send({ type: 'not-verified', msg: 'No existe un usuario asociado al token.'});
       res.render('session/resetPassword', {errors: {}, usuario: usuario});
     });
   });
@@ -200,7 +204,9 @@ function validarUsuario(req, res, next){
       res.json({status: "error", message: err.message, data: null});
     }
     else{ 
-      req.body.userId = decoded.id;
+      req.body.userId = decoded;
+      //req.body.userId = decoded.id;
+
 
       console.log('jwt verify: ' + decoded); 
 

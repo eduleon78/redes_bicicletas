@@ -1,7 +1,15 @@
 extends ../layout 
 
 block content
-  a(href='/bicicletas/create') Nueva Bicicleta 
+  br
+  
+  a.btn.btn-dark(href='/') Inicio
+  br
+  br
+
+  a.btn.btn-primary(href='/bicicletas/create') Nueva Bicicleta
+  br
+  br 
      
   table.table.table-striped.table-hover
     thead
@@ -10,8 +18,8 @@ block content
         th(scope='col') color 
         th(scope='col') modelo 
         th(scope='col') ubicacion
-        th(scope='col')
-        th(scope='col') 
+        th(scope='col') edicion 
+        th(scope='col') borrado 
     tbody 
       each bici in bicis
         tr 
@@ -21,10 +29,10 @@ block content
           td= bici.modelo
           td= bici.ubicacion
           td
-            a(href='bicicletas/' + bici.id + '/update') Editar 
+            a.btn.btn-primary(href='bicicletas/' + bici.id + '/update') Editar 
           td
             form.inline(method='post' action='bicicletas/' + bici.id + '/delete')
                 input(type='hidden' name='id' value= bici.id)
-                button.link-button(type='submit' name='submit_param' value='submit_value' class='btn')
+                button.link-button.btn-danger(type='submit' name='submit_param' value='submit_value' class='btn')
                     = 'Eliminar' 
 

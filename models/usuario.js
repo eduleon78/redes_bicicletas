@@ -27,7 +27,7 @@ var usuarioSchema = new Schema({
         required: [true, 'El email es obligatorio'],
         lowercase: true,
         unique: true,
-        validate: [validateEmail, 'Por favor, ingrese un email válido'],
+        validate: [validateEmail, 'Por favor ingrese un email valido'],
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]
     },
     password: {
@@ -44,7 +44,7 @@ var usuarioSchema = new Schema({
     facebookId: String
 });
 
-usuarioSchema.plugin(uniqueValidator, { message: 'El {PATH} ya existe con otro usuario.'});
+usuarioSchema.plugin(uniqueValidator, {message: 'El {PATH} ya existe en otro usuario'});
 
 usuarioSchema.pre('save', function(next){
     if (this.isModified('password')){
@@ -90,20 +90,19 @@ usuarioSchema.methods.enviar_email_bienvenida = function(cb) {
     token.save(function (err) {
         if (err) { return console.log(err.message); }
 
-        const mailOptions = {
-            from: 'no-reply@redesbicicletas.com',
-            to: email_destination, 
+        var mailOptions = {
+            from: 'no-replay@redes_bicicletas.com',
+            to: email_destination,
             subject: 'verificacion de cuenta',
-            text: 'hola: \n\n' + 'Por favor, para verificar tu cuenta haga click en este link: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '\n'
+            text: 'hola estimado ciclista: \n\n' + 'Por favor, para vericar tu cuenta haga click en el siguiente enlace: \n' + 'http://localhost:5000' + '\/token/confirmation\/' + token.token + '\n'
         };
-
         mailer.sendMail(mailOptions, function (err) {
             if (err) console.log(err);
-            console.log('Se ha enviado un email de bienvenida a: ' + email_destination + ':');
+
+            console.log('Se ha enviado un email de bienvenida a: ' + email_destination + ':')
         });
     });
 }
-
 usuarioSchema.statics.findOneOrCreateByGoogle = function findOneOrCreate(condition, callback) {
     const self = this;
     console.log(condition)

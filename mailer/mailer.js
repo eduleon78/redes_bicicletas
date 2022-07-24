@@ -5,25 +5,19 @@ const sgTransport = require('nodemailer-sendgrid-transport');
 let mailConfig;
 if (process.env.NODE_ENV === 'production'){
     const options = {
-        server: "smpt.sendgrid.net",
-        port: 587,
         auth: {
-            user:"apikey",
             api_key: process.env.SENDGRID_API_SECRET
-        },
-    };
+        }
+    }
     mailConfig = sgTransport(options);
 } else {
     if (process.env.NODE_ENV === 'staging'){
         console.log('***STAGING***');
         const options = {
-            server: "smpt.sendgrid.net",
-            port: 587,
             auth: {
-                user: "apikey",
                 api_key: process.env.SENDGRID_API_SECRET
-            },
-        };
+            }
+        }
         mailConfig = sgTransport(options);
     }else {
         // all emails are catched by ethereal.email
