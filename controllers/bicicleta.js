@@ -32,7 +32,7 @@ exports.bicicleta_update_get = function(req, res){
 exports.bicicleta_update_post = function(req, res){
     var update_values = {
         color: req.body.color,
-        modelo: req.body.color,
+        modelo: req.body.modelo,
         ubicacion: [req.body.lat, req.body.lng]
     };
     Bicicleta.findByIdAndUpdate(req.params.id, update_values, (err, bicicleta) => {

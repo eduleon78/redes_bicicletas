@@ -98,7 +98,7 @@ app.get('/forgotPassword', function(req, res){
   res.render('session/forgotPassword');
 });
 
-app.post('/forgotPassword', function(req, res){
+app.post('/forgotPassword', function(req, res, next){
   Usuario.findOne({ email: req.body.email }, function (err, usuario){
     if (!usuario) return res.render('session/forgotPassword', { info: {message: 'No existe el email para un usuario existente.'}});
 
@@ -113,10 +113,18 @@ app.post('/forgotPassword', function(req, res){
 
 app.get('/resetPassword/:token', function(req, res, next){
   Token.findOne({ token: req.params.token }, function (err, token){
-    if (!token) return res.status(400).send({ type: 'not-verified', msg: 'No existe un usuario asociado al token. Verifique que su token no haya expirado.'});
+    if (!token) 
+      return res.status(400).send({ 
+        type: 'not-verified',
+        msg: 'No existe un usuario asociado al token. Verifique que su token no haya expirado.'
+      });
 
     Usuario.findById(token._userId, function(err, usuario){
-      if (!usuario) return res.status(400).send({ type: 'not-verified', msg: 'No existe un usuario asociado al token.'});
+      if (!usuario) 
+        return res.status(400).send({ 
+        type: 'not-verified', 
+        msg: 'No existe un usuario asociado al token.'
+      });
       res.render('session/resetPassword', {errors: {}, usuario: usuario});
     });
   });
@@ -124,7 +132,15 @@ app.get('/resetPassword/:token', function(req, res, next){
 
 app.post('/resetPassword', function(req, res){
   if(req.body.password != req.body.confirm_password) {
-    res.render('session/resetPassword', {errors: {confirm_password: { message: 'no coincide el password ingresado'}}, usuario: new Usuario({email: req.body.email})});
+    res.render('session/resetPassword', { 
+      errors: { 
+        confirm_password: { 
+          message: 'no coincide el password ingresado'
+        }}, 
+    usuario: new Usuario({
+      email: req.body.email 
+    })
+  });
     return;
   }
   Usuario.findOne({ email: req.body.email }, function (err, usuario) {
@@ -208,7 +224,7 @@ function validarUsuario(req, res, next){
       //req.body.userId = decoded.id;
 
 
-      console.log('jwt verify: ' + decoded); 
+      console.log('jwt verify: ' + decoded.id); 
 
       next();
     }
