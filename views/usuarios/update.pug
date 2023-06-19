@@ -18,8 +18,13 @@ block content
         input#nombre.form-control(type='text' name='nombre' value= usuario.nombre class= errors.nombre)
         if errors.nombre 
             small#nombrehelp.text-danger 
-                = errors.nombre.message 
-
+                = errors.nombre.message
+    .form-group 
+        label(for='email') Email:
+        input#email.form-control(type='text' name='email' value= usuario.email class= errors.email)
+        if errors.email 
+            small#emailhelp.text-danger 
+                = errors.email.message
 
     br
     br
